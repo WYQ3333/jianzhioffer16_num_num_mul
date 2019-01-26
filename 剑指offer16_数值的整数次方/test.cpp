@@ -47,7 +47,7 @@ public:
 
 void TestFunc2(){
 	Solution2 s;
-	double result = s.Power(0, 3);
+	double result = s.Power(2, -3);
 	cout << "2.22的4次方为：" << result << endl;
 }
 
@@ -102,8 +102,8 @@ void TestFunc3(){
 }
 
 int main(){
-	/*TestFunc1();
-	TestFunc2();*/
+	TestFunc1();
+	TestFunc2();
 	TestFunc3();
 	system("pause");
 	return 0;
