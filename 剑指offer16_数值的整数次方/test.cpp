@@ -2,7 +2,7 @@
 using namespace std;
 
 
-class Solution {
+class Solution1 {
 public:
 	double Power(double base, int exponent) {
 		int i = exponent;
@@ -16,7 +16,7 @@ public:
 };
 
 void TestFunc1(){
-	Solution s;
+	Solution1 s;
 	double result = s.Power(2.22, 4);
 	cout << "2.22的4次方为：" << result << endl;
 }
@@ -101,10 +101,40 @@ void TestFunc3(){
 	cout << "2.22的4次方为：" << result << endl;
 }
 
+class Solution {
+public:
+	double Power(double base, int exponent) {
+		if (exponent>0)
+		{
+			if (exponent == 1)
+				return base;
+			if (exponent % 2 == 0)
+				return Power(base, exponent / 2)*Power(base, exponent / 2);
+			else
+				return Power(base, exponent / 2)*Power(base, exponent / 2 + 1);
+		}
+		else if (exponent == 0)
+		{
+			return 1;
+		}
+		else
+		{
+			return 1 / Power(base, 0 - exponent);
+		}
+	}
+};
+
+void TestFunc(){
+	Solution s;
+	double result = s.Power(2, -3);
+	cout << "2.22的4次方为：" << result << endl;
+}
+
 int main(){
-	TestFunc1();
-	TestFunc2();
+	/*TestFunc1();
+	TestFunc2();*/
 	TestFunc3();
+	TestFunc();
 	system("pause");
 	return 0;
 }
