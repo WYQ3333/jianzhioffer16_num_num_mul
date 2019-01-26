@@ -7,7 +7,7 @@ public:
 	double Power(double base, int exponent) {
 		int i = exponent;
 		double result = base;
-		while (i){
+		while (i-1){
 			result *= base;
 			--i;
 		}
@@ -50,6 +50,7 @@ void TestFunc2(){
 
 int main(){
 	TestFunc1();
+	TestFunc2();
 	system("pause");
 	return 0;
 }
