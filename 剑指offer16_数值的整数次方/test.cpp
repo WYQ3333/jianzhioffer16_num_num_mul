@@ -27,6 +27,9 @@ public:
 		if (exponent == 0){
 			return 1.0;
 		}
+		if (base == 0.0){
+			return 0.0;
+		}
 		if (exponent < 0 && base == 0.0){
 			return 0.0;
 		}
@@ -44,7 +47,7 @@ public:
 
 void TestFunc2(){
 	Solution2 s;
-	double result = s.Power(2.22, 4);
+	double result = s.Power(0, 3);
 	cout << "2.22的4次方为：" << result << endl;
 }
 
