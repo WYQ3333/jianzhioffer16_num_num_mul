@@ -82,24 +82,20 @@ public:
 				return 1;
 			}
 			if (base != 0 && base != 1){
-				double temp = 1 / base;
+				double temp = base;
 				double result = temp;
-				int i = exponent;
+				int i = 0-exponent;
 				while (i - 1){
 					result *= temp;
-					++i;
+					--i;
 				}
-				return result;
+				return 1/result;
 			}
 		}
 	}
 };
 
-void TestFunc3(){
-	Solution3 s;
-	double result = s.Power(2, -3);
-	cout << "2.22的4次方为：" << result << endl;
-}
+
 
 class Solution {
 public:
@@ -126,7 +122,12 @@ public:
 
 void TestFunc(){
 	Solution s;
-	double result = s.Power(2, -3);
+	double result = s.Power(2, 4);
+	cout << "2.22的4次方为：" << result << endl;
+}
+void TestFunc3(){
+	Solution3 s;
+	double result = s.Power(2, 4);
 	cout << "2.22的4次方为：" << result << endl;
 }
 
