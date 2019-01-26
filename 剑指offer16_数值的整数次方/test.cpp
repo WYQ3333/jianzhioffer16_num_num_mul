@@ -11,7 +11,7 @@ public:
 			result *= base;
 			--i;
 		}
-		return base;
+		return result;
 	}
 };
 
