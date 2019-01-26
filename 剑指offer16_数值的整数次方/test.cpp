@@ -27,14 +27,15 @@ public:
 		if (exponent == 0){
 			return 1.0;
 		}
-		if (exponent < 0 && base == 0){
+		if (exponent < 0 && base == 0.0){
 			return 0.0;
 		}
-		if (base != 0){
+		if (base != 0.0){
 			int i = exponent;
 			double result = base;
 			while (i-1){
 				result *= base;
+				--i;
 			}
 			return result;
 		}
